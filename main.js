@@ -17,9 +17,14 @@ async function getJoke() {
         }
 
         const json = await response.json();
-        console.log(json);
+        displayJoke(json.value);
     } catch (err) {
         console.log(err);
         alert('Failed to fetch new joke');
     }
+}
+
+function displayJoke(joke) {
+    const jokeText = document.querySelector('#js-joke-text')
+    jokeText.textContent = joke
 }
