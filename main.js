@@ -45,3 +45,5 @@ function displayJoke(joke) {
 function setTweetButton(joke) {
     twitterButton.setAttribute('href', `https://twitter.com/share?text=${joke}`);
 }
+
+getJoke();
