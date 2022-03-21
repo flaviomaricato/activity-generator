@@ -1,5 +1,6 @@
 const newJokeButton = document.querySelector('#js-new-joke');
 const spinner = document.querySelector('#js-spinner');
+const twitterButton = document.querySelector('#js-tweet');
 
 newJokeButton.addEventListener('click', getJoke);
 
@@ -24,6 +25,7 @@ async function getJoke() {
 
         const json = await response.json();
         displayJoke(json.value);
+        setTweetButton(json.value);
     } catch (err) {
         console.log(err);
         alert('Failed to fetch new joke');
@@ -38,4 +40,8 @@ async function getJoke() {
 function displayJoke(joke) {
     const jokeText = document.querySelector('#js-joke-text')
     jokeText.textContent = joke
+}
+
+function setTweetButton(joke) {
+    twitterButton.setAttribute('href', `https://twitter.com/share?text=${joke}`);
 }
