@@ -34,15 +34,19 @@ html {
     border-bottom: 1px solid #ebebeb;
   }
   
-  .jokes {
+  .activities {
     padding: 20px 50px;
-    min-height: 200px;
+    min-height: 100px;
   }
   
-  .joke-text {
+  .activity-text {
+    margin-top: 50px;
+    padding-top: 20px;
     padding-bottom: 20px;
     font-size: 25px;
     color: black;
+    text-align: center;
+    border: 1px solid grey;
   }
   
   .controls {
@@ -72,16 +76,16 @@ html {
     background-color: #1e7fbb;
   }
   
-  .new-joke {
+  .new-activity {
     background-color: #f15b23;
     margin-bottom: 15px;
   }
   
-  .new-joke:hover {
+  .new-activity:hover {
     background-color: #e44515;
   }
   
-  .new-joke:disabled {
+  .new-activity:disabled {
     background-color: #cccccc;
     color: #666666;
     cursor: not-allowed;
@@ -91,7 +95,7 @@ html {
     .app {
       width: 100%;
     }
-    .joke-text {
+    .activity-text {
       font-size: 18px;
     }
   }
