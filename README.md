@@ -1,1 +1,1 @@
-# chuck-norris-joke-generator
+# Activity Generator
